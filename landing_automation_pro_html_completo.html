@@ -560,7 +560,7 @@
 
   <!-- Modal: Política de privacidad -->
   <div id="privacy" class="hidden fixed inset-0 z-50 overflow-y-auto">
-    <div class="flex items-center justify-center min-h-screen p-4">
+    <div class="relative z-50 flex items-center justify-center min-h-screen p-4">
       <div class="bg-white max-w-2xl w-full rounded-lg shadow-lg">
         <div class="p-6 space-y-4">
           <h2 class="text-xl font-semibold">Política de privacidad</h2>
@@ -576,12 +576,12 @@
         </div>
       </div>
     </div>
-    <div class="fixed inset-0 bg-black/50" onclick="closeModal('privacy')"></div>
+    <div class="fixed inset-0 z-40 bg-black/50" onclick="closeModal('privacy')"></div>
   </div>
 
   <!-- Modal: Condiciones generales -->
   <div id="terms" class="hidden fixed inset-0 z-50 overflow-y-auto">
-    <div class="flex items-center justify-center min-h-screen p-4">
+    <div class="relative z-50 flex items-center justify-center min-h-screen p-4">
       <div class="bg-white max-w-2xl w-full rounded-lg shadow-lg">
         <div class="p-6 space-y-4">
           <h2 class="text-xl font-semibold">Condiciones generales</h2>
@@ -598,7 +598,7 @@
         </div>
       </div>
     </div>
-    <div class="fixed inset-0 bg-black/50" onclick="closeModal('terms')"></div>
+    <div class="fixed inset-0 z-40 bg-black/50" onclick="closeModal('terms')"></div>
   </div>
 
   <!-- Schema.org JSON-LD -->
