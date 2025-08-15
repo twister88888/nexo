@@ -551,12 +551,55 @@
     <div class="max-w-7xl mx-auto px-4 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-sm text-gray-500">© <span id="y"></span> AutomationPro. Todos los derechos reservados.</p>
       <nav class="flex items-center gap-4 text-sm">
-        <a href="/privacidad" class="text-gray-600 hover:text-primary-900">Política de privacidad</a>
-        <a href="/condiciones" class="text-gray-600 hover:text-primary-900">Condiciones generales</a>
+        <button onclick="openModal('privacy')" class="text-gray-600 hover:text-primary-900">Política de privacidad</button>
+        <button onclick="openModal('terms')" class="text-gray-600 hover:text-primary-900">Condiciones generales</button>
         <a href="#contacto" class="text-gray-600 hover:text-primary-900">Contacto</a>
       </nav>
     </div>
   </footer>
+
+  <!-- Modal: Política de privacidad -->
+  <div id="privacy" class="hidden fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white max-w-2xl w-full rounded-lg shadow-lg">
+        <div class="p-6 space-y-4">
+          <h2 class="text-xl font-semibold">Política de privacidad</h2>
+          <p class="text-sm text-gray-600">
+            AutomationPro recopila datos personales solo para responder a tus consultas y prestar los servicios contratados.
+            No compartimos información con terceros salvo obligación legal. Puedes ejercer tus derechos de acceso, rectificación
+            y supresión enviando un correo a privacidad@automationpro.es.
+          </p>
+          <p class="text-sm text-gray-600">Última actualización: 1 de mayo de 2024.</p>
+        </div>
+        <div class="px-6 py-4 flex justify-end">
+          <button onclick="closeModal('privacy')" class="text-primary-900 hover:underline">Cerrar</button>
+        </div>
+      </div>
+    </div>
+    <div class="fixed inset-0 bg-black/50" onclick="closeModal('privacy')"></div>
+  </div>
+
+  <!-- Modal: Condiciones generales -->
+  <div id="terms" class="hidden fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white max-w-2xl w-full rounded-lg shadow-lg">
+        <div class="p-6 space-y-4">
+          <h2 class="text-xl font-semibold">Condiciones generales</h2>
+          <ol class="list-decimal list-inside text-sm text-gray-600 space-y-2">
+            <li>Los servicios se facturan según el alcance definido en la propuesta comercial.</li>
+            <li>El cliente debe proporcionar accesos y datos veraces para las integraciones.</li>
+            <li>AutomationPro no se responsabiliza por interrupciones de plataformas externas.</li>
+            <li>El pago se realiza 50 % al inicio y 50 % al finalizar el proyecto.</li>
+          </ol>
+          <p class="text-sm text-gray-600">Última actualización: 1 de mayo de 2024.</p>
+        </div>
+        <div class="px-6 py-4 flex justify-end">
+          <button onclick="closeModal('terms')" class="text-primary-900 hover:underline">Cerrar</button>
+        </div>
+      </div>
+    </div>
+    <div class="fixed inset-0 bg-black/50" onclick="closeModal('terms')"></div>
+  </div>
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -640,6 +683,16 @@
       const m = document.getElementById('mobile-menu');
       if (!m) return;
       m.classList.toggle('hidden');
+    }
+
+    function openModal(id){
+      const m = document.getElementById(id);
+      if (m) m.classList.remove('hidden');
+    }
+
+    function closeModal(id){
+      const m = document.getElementById(id);
+      if (m) m.classList.add('hidden');
     }
 
     // Highlight active nav on scroll
