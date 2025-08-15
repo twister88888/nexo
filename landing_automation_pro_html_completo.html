@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO Meta -->
+  <title>Automatización Empresarial | ROI Garantizado en 90 Días | AutomationPro</title>
+  <meta name="description" content="Automatizamos procesos empresariales con Zapier, Make y n8n. Ahorra 75% tiempo, reduce errores 94%. ROI garantizado en 90 días. Auditoría gratuita." />
+  <meta name="keywords" content="automatización empresarial, zapier, make, integromat, n8n, automatizar procesos, workflows, integraciones apps" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://automationpro.es" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Automatización Empresarial | ROI Garantizado en 90 Días | AutomationPro" />
+  <meta property="og:description" content="Automatizamos procesos empresariales con Zapier, Make y n8n. Ahorra 75% tiempo, reduce errores 94%. ROI garantizado. Auditoría gratuita." />
+  <meta property="og:image" content="https://automationpro.es/images/og-automation-dashboard.jpg" />
+  <meta property="og:image:alt" content="Dashboard de automatizaciones empresariales mostrando métricas de ROI y eficiencia" />
+  <meta property="og:url" content="https://automationpro.es" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AutomationPro" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Automatización Empresarial | ROI Garantizado en 90 Días" />
+  <meta name="twitter:description" content="Ahorra 75% tiempo automatizando procesos con Zapier, Make y n8n. ROI garantizado en 90 días. Auditoría gratuita." />
+  <meta name="twitter:image" content="https://automationpro.es/images/twitter-automation-results.jpg" />
+
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#f8fafc', 100: '#f1f5f9', 600: '#475569', 900: '#0f172a' },
+            success: { 100: '#dcfce7', 500: '#22c55e' },
+            warning: { 100: '#fef3c7', 500: '#f59e0b' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* BG grid pattern used in hero */
+    .bg-grid-pattern {
+      background-image: linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+      background-position: -1px -1px;
+    }
+    .fade-in { animation: fadeIn .6s ease-in-out forwards; opacity: 0; }
+    @keyframes fadeIn { to { opacity: 1; } }
+    .slide-up { animation: slideUp .6s ease-out forwards; transform: translateY(30px); opacity: 0; }
+    @keyframes slideUp { to { transform: translateY(0); opacity: 1; } }
+    /* Button loading spinner */
+    .loading { position: relative; pointer-events: none; }
+    .loading::after { content: ''; position: absolute; inset: 0; width: 16px; height: 16px; margin: auto; border: 2px solid transparent; border-top-color: #fff; border-radius: 9999px; animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
+    <nav class="max-w-7xl mx-auto px-4 lg:px-8 py-4" role="navigation" aria-label="Navegación principal">
+      <div class="flex items-center justify-between">
+        <a href="#hero" class="flex items-center gap-3" aria-label="Ir al inicio">
+          <img src="/logo-automationpro.png" alt="AutomationPro - Automatización Empresarial" class="h-8 w-auto" width="120" height="32" loading="lazy" />
+          <span class="sr-only">AutomationPro</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="#hero" class="nav-link text-gray-600 hover:text-primary-900 font-medium" aria-current="page">Inicio</a>
+          <a href="#problema" class="nav-link text-gray-600 hover:text-primary-900 font-medium">El Problema</a>
+          <a href="#servicios" class="nav-link text-gray-600 hover:text-primary-900 font-medium">Servicios</a>
+          <a href="#proceso" class="nav-link text-gray-600 hover:text-primary-900 font-medium">Cómo Trabajamos</a>
+          <a href="#beneficios" class="nav-link text-gray-600 hover:text-primary-900 font-medium">Resultados</a>
+          <a href="#casos" class="nav-link text-gray-600 hover:text-primary-900 font-medium">Casos de Éxito</a>
+          <a href="#testimonios" class="nav-link text-gray-600 hover:text-primary-900 font-medium">Testimonios</a>
+          <a href="#precios" class="nav-link text-gray-600 hover:text-primary-900 font-medium">Precios</a>
+          <a href="#faq" class="nav-link text-gray-600 hover:text-primary-900 font-medium">FAQ</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#contacto" class="hidden sm:inline-flex bg-success-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-green-300" aria-label="Solicitar auditoría gratuita">Auditoría Gratuita</a>
+          <button class="lg:hidden p-2 rounded-md text-gray-600 hover:text-primary-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Abrir menú" onclick="toggleMobileMenu()">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4 border-t border-gray-100">
+        <div class="flex flex-col pt-4">
+          <a href="#hero" class="py-2 text-gray-700" onclick="toggleMobileMenu()">Inicio</a>
+          <a href="#problema" class="py-2 text-gray-700" onclick="toggleMobileMenu()">El Problema</a>
+          <a href="#servicios" class="py-2 text-gray-700" onclick="toggleMobileMenu()">Servicios</a>
+          <a href="#proceso" class="py-2 text-gray-700" onclick="toggleMobileMenu()">Cómo Trabajamos</a>
+          <a href="#beneficios" class="py-2 text-gray-700" onclick="toggleMobileMenu()">Resultados</a>
+          <a href="#casos" class="py-2 text-gray-700" onclick="toggleMobileMenu()">Casos de Éxito</a>
+          <a href="#testimonios" class="py-2 text-gray-700" onclick="toggleMobileMenu()">Testimonios</a>
+          <a href="#precios" class="py-2 text-gray-700" onclick="toggleMobileMenu()">Precios</a>
+          <a href="#faq" class="py-2 text-gray-700" onclick="toggleMobileMenu()">FAQ</a>
+          <a href="#contacto" class="mt-2 inline-flex items-center justify-center bg-success-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold focus:outline-none focus:ring-4 focus:ring-green-300" onclick="toggleMobileMenu()">🚀 Auditoría Gratuita</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sticky CTA mobile -->
+  <div class="fixed bottom-3 left-3 right-3 z-40 sm:hidden">
+    <a href="#contacto" class="block text-center bg-success-500 hover:bg-green-600 text-white py-3 rounded-xl font-semibold shadow-lg focus:outline-none focus:ring-4 focus:ring-green-300">🚀 Quiero mi auditoría</a>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="relative bg-gradient-to-br from-primary-50 to-white py-16 lg:py-24 overflow-hidden">
+      <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <h1 class="text-4xl lg:text-6xl font-bold text-primary-900 leading-tight mb-6">Automatiza. Ahorra. <span class="text-success-500">Escala sin límites.</span></h1>
+          <p class="text-lg lg:text-xl text-gray-600 leading-relaxed mb-8">Reducimos hasta un <strong>75% el tiempo</strong> en tareas repetitivas con automatizaciones que se pagan solas en menos de <strong>90 días</strong>. Sin conocimientos técnicos. Sin cambios disruptivos.</p>
+          <div class="flex flex-col sm:flex-row gap-4 mb-10">
+            <a href="#contacto" class="bg-success-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-green-300 text-center">🚀 Solicitar auditoría gratuita</a>
+            <a href="#contacto" class="bg-white hover:bg-gray-50 text-primary-900 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-primary-900 focus:outline-none focus:ring-4 focus:ring-blue-300 text-center">📹 Ver demo en 15 minutos</a>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+            <div class="bg-white p-4 rounded-xl shadow-md"><div class="text-2xl font-bold text-success-500">+300</div><div class="text-sm text-gray-600">Procesos</div></div>
+            <div class="bg-white p-4 rounded-xl shadow-md"><div class="text-2xl font-bold text-success-500">90 días</div><div class="text-sm text-gray-600">ROI garantizado</div></div>
+            <div class="bg-white p-4 rounded-xl shadow-md"><div class="text-2xl font-bold text-success-500">24/7</div><div class="text-sm text-gray-600">Soporte</div></div>
+            <div class="bg-white p-4 rounded-xl shadow-md"><div class="text-2xl font-bold text-success-500">+150</div><div class="text-sm text-gray-600">Clientes</div></div>
+          </div>
+        </div>
+        <div class="slide-up">
+          <div class="relative bg-white p-8 rounded-2xl shadow-2xl">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-xl font-semibold text-primary-900">Dashboard Automatizaciones</h3>
+              <div class="w-3 h-3 bg-success-500 rounded-full animate-pulse" aria-hidden="true"></div>
+            </div>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center"><span class="text-gray-600">Tiempo ahorrado hoy</span><span class="text-2xl font-bold text-success-500">4.2h</span></div>
+              <div class="flex justify-between items-center"><span class="text-gray-600">Procesos completados</span><span class="text-2xl font-bold text-success-500">847</span></div>
+              <div class="flex justify-between items-center"><span class="text-gray-600">Errores evitados</span><span class="text-2xl font-bold text-success-500">23</span></div>
+              <div class="flex justify-between items-center"><span class="text-gray-600">ROI este mes</span><span class="text-2xl font-bold text-success-500">€12.4K</span></div>
+            </div>
+            <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">1</div>
+                <div class="h-0.5 bg-gray-300 flex-1"></div>
+                <div class="w-8 h-8 bg-success-500 rounded-full flex items-center justify-center text-white text-xs font-bold">2</div>
+                <div class="h-0.5 bg-gray-300 flex-1"></div>
+                <div class="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-white text-xs font-bold">3</div>
+              </div>
+              <p class="text-xs text-gray-600 text-center">Lead → CRM → Email automático</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section id="problema" class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold text-primary-900 mb-8">¿Te suena familiar esta rutina diaria?</h2>
+          <div class="space-y-6 text-gray-700">
+            <p class="text-lg">Tu equipo comercial exporta manualmente leads de formularios web a Excel, luego los copia al CRM, después envía emails de seguimiento uno por uno, y finalmente actualiza el estado en Slack. <strong class="text-primary-900">Lo que debería tomar 2 minutos, se convierte en 45 minutos por lead</strong>.</p>
+            <p class="text-lg">Marketing actualiza inventarios en 3 plataformas, RRHH gestiona onboarding con 15 emails manuales, y operaciones reconcilia pedidos entre eCommerce y ERP con hojas de cálculo. <strong class="text-primary-900">Resultado: frustración, errores y oportunidades perdidas</strong>.</p>
+            <p class="text-lg">El <strong class="text-success-500">87% de estas tareas puede automatizarse</strong>, reduciendo errores un 94%.
+            </p>
+          </div>
+          <ul class="mt-8 space-y-3">
+            <li class="flex gap-3"><span class="w-2 h-2 bg-red-500 rounded-full mt-2"></span><span>2–4h diarias perdidas por empleado en tareas repetitivas</span></li>
+            <li class="flex gap-3"><span class="w-2 h-2 bg-red-500 rounded-full mt-2"></span><span>Costes por errores manuales de hasta <strong>€23.000/año</strong> por empleado</span></li>
+            <li class="flex gap-3"><span class="w-2 h-2 bg-red-500 rounded-full mt-2"></span><span>Datos duplicados entre sistemas críticos</span></li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-red-50 to-warning-100 p-8 rounded-2xl">
+          <h3 class="text-2xl font-bold text-primary-900 mb-8 text-center">El coste real de NO automatizar</h3>
+          <div class="grid sm:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow text-center"><div class="text-3xl font-bold text-red-500 mb-1">67%</div><p class="text-gray-700">Tiempo desperdiciado</p></div>
+            <div class="bg-white p-6 rounded-xl shadow text-center"><div class="text-3xl font-bold text-red-500 mb-1">€23.000</div><p class="text-gray-700">Coste anual por empleado</p></div>
+            <div class="bg-white p-6 rounded-xl shadow text-center"><div class="text-3xl font-bold text-red-500 mb-1">2.3h</div><p class="text-gray-700">Ahorro diario por empleado</p></div>
+          </div>
+          <div class="mt-8 p-4 bg-white rounded-lg border-l-4 border-warning-500 text-sm text-gray-700">Dato: Empresas no automatizadas pierden ~€15.000/mes en eficiencia frente a sus competidores.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">Automatizaciones que transforman tu operación</h2>
+          <p class="text-xl text-gray-600">Conectamos, integramos y automatizamos cualquier proceso con las mejores herramientas.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- 8 cards -->
+          <article class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg grid place-items-center mb-3 text-2xl">🔗</div>
+            <h3 class="text-xl font-semibold mb-2">Integraciones entre Apps</h3>
+            <p class="text-gray-600 text-sm mb-3">+200 apps (CRM, ERP, eCommerce, email) con sincronización bidireccional en tiempo real.</p>
+            <p class="text-xs text-gray-500"><strong>Ejemplo:</strong> Shopify → CRM → Email → Facturación</p>
+          </article>
+          <article class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <div class="w-12 h-12 bg-green-100 rounded-lg grid place-items-center mb-3 text-2xl">⚡</div>
+            <h3 class="text-xl font-semibold mb-2">Flujos de Trabajo Complejos</h3>
+            <p class="text-gray-600 text-sm mb-3">Aprobaciones, notificaciones inteligentes, condiciones y validaciones avanzadas.</p>
+            <p class="text-xs text-gray-500"><strong>Ejemplo:</strong> Vacaciones → Aprobación → RRHH → Calendario</p>
+          </article>
+          <article class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg grid place-items-center mb-3 text-2xl">🤖</div>
+            <h3 class="text-xl font-semibold mb-2">Chatbots y Asistentes</h3>
+            <p class="text-gray-600 text-sm mb-3">Soporte 24/7, cualificación de leads, integraciones con WhatsApp/Teams/Slack.</p>
+            <p class="text-xs text-gray-500"><strong>Ejemplo:</strong> Bot que resuelve 80% de consultas</p>
+          </article>
+          <article class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <div class="w-12 h-12 bg-yellow-100 rounded-lg grid place-items-center mb-3 text-2xl">📊</div>
+            <h3 class="text-xl font-semibold mb-2">Automatización de Reportes</h3>
+            <p class="text-gray-600 text-sm mb-3">Dashboards en tiempo real e informes programados por email/Slack.</p>
+            <p class="text-xs text-gray-500"><strong>Ejemplo:</strong> Ventas: CRM + GA + Ads</p>
+          </article>
+          <article class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <div class="w-12 h-12 bg-red-100 rounded-lg grid place-items-center mb-3 text-2xl">🎯</div>
+            <h3 class="text-xl font-semibold mb-2">Lead Scoring y Nurturing</h3>
+            <p class="text-gray-600 text-sm mb-3">Puntuación por comportamiento y secuencias personalizadas.</p>
+            <p class="text-xs text-gray-500"><strong>Ejemplo:</strong> Ebook → +10 → Email → CRM</p>
+          </article>
+          <article class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <div class="w-12 h-12 bg-green-100 rounded-lg grid place-items-center mb-3 text-2xl">💰</div>
+            <h3 class="text-xl font-semibold mb-2">Automatización Financiera</h3>
+            <p class="text-gray-600 text-sm mb-3">Facturación, recordatorios de pago, conciliación. Stripe/PayPal/bancos.</p>
+            <p class="text-xs text-gray-500"><strong>Ejemplo:</strong> Suscripción vencida → Factura → Email</p>
+          </article>
+          <article class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <div class="w-12 h-12 bg-orange-100 rounded-lg grid place-items-center mb-3 text-2xl">📦</div>
+            <h3 class="text-xl font-semibold mb-2">Inventario Inteligente</h3>
+            <p class="text-gray-600 text-sm mb-3">Stock sincronizado, alertas y pricing multicanal.</p>
+            <p class="text-xs text-gray-500"><strong>Ejemplo:</strong> Stock &lt; 10 → Pedido proveedor</p>
+          </article>
+          <article class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+            <div class="w-12 h-12 bg-indigo-100 rounded-lg grid place-items-center mb-3 text-2xl">🔄</div>
+            <h3 class="text-xl font-semibold mb-2">Migraciones & Sync de Datos</h3>
+            <p class="text-gray-600 text-sm mb-3">Transferencias seguras, limpieza y normalización sin duplicados.</p>
+            <p class="text-xs text-gray-500"><strong>Ejemplo:</strong> CRM legado → HubSpot</p>
+          </article>
+        </div>
+
+        <!-- Stack -->
+        <div class="mt-14 bg-white p-8 rounded-2xl shadow-lg">
+          <h3 class="text-2xl font-bold text-center mb-8">Trabajamos con las mejores herramientas</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div>
+              <h4 class="font-semibold mb-2">No‑code</h4>
+              <ul class="text-gray-600 text-sm space-y-1">
+                <li>Zapier (5000+ apps)</li>
+                <li>Make / Integromat</li>
+                <li>Microsoft Power Automate</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Low‑code</h4>
+              <ul class="text-gray-600 text-sm space-y-1">
+                <li>n8n (self‑hosted)</li>
+                <li>Bubble</li>
+                <li>Webflow Logic</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">APIs Custom</h4>
+              <ul class="text-gray-600 text-sm space-y-1">
+                <li>Endpoints y webhooks</li>
+                <li>Integraciones complejas</li>
+                <li>Microservicios</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">RPA & Datos</h4>
+              <ul class="text-gray-600 text-sm space-y-1">
+                <li>UiPath</li>
+                <li>Automation Anywhere</li>
+                <li>Airtable / Firebase</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section id="proceso" class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">De la idea a la automatización en 4 pasos</h2>
+          <p class="text-xl text-gray-600">Sprints semanales con entregables desde la primera semana.</p>
+        </div>
+        <ol class="relative border-l-4 border-success-500 pl-6 space-y-10">
+          <li>
+            <h3 class="text-xl font-semibold">🔍 Paso 1 — Diagnóstico y Auditoría (Semana 1)</h3>
+            <p class="text-gray-600">Análisis de procesos, mapeo de datos, priorización por ROI. Workshop 2h.</p>
+          </li>
+          <li>
+            <h3 class="text-xl font-semibold">🎯 Paso 2 — Diseño y Prototipado (Semana 2)</h3>
+            <p class="text-gray-600">Flujos detallados, prototipos en test, métricas y monitorización.</p>
+          </li>
+          <li>
+            <h3 class="text-xl font-semibold">⚙️ Paso 3 — Implementación y Testing (Semanas 3–4)</h3>
+            <p class="text-gray-600">Despliegue en producción, pruebas con datos reales, formación.</p>
+          </li>
+          <li>
+            <h3 class="text-xl font-semibold">🚀 Paso 4 — Lanzamiento y Soporte (Continuo)</h3>
+            <p class="text-gray-600">Monitoreo 24/7, optimizaciones y revisiones mensuales.</p>
+          </li>
+        </ol>
+        <div class="mt-10 text-center">
+          <a href="#contacto" class="inline-flex items-center gap-2 bg-success-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow focus:outline-none focus:ring-4 focus:ring-green-300">Quiero mi auditoría</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS / RESULTADOS -->
+    <section id="beneficios" class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">Resultados medibles desde el primer día</h2>
+          <p class="text-xl text-gray-600">Productividad, costes y precisión operativa mejoran de forma inmediata.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow"><h3 class="text-lg font-semibold mb-2">⏱️ Ahorro de Tiempo</h3><p class="text-gray-600">Hasta <strong>-75%</strong> en tareas administrativas y +2.3h/día por empleado.</p></div>
+          <div class="bg-white p-6 rounded-xl shadow"><h3 class="text-lg font-semibold mb-2">💰 Costes Operativos</h3><p class="text-gray-600"><strong>-40%</strong> de costes en procesos automatizados. ROI medio 320%/12m.</p></div>
+          <div class="bg-white p-6 rounded-xl shadow"><h3 class="text-lg font-semibold mb-2">🎯 Precisión</h3><p class="text-gray-600">Errores manuales <strong>-94%</strong>. Trazabilidad completa.</p></div>
+          <div class="bg-white p-6 rounded-xl shadow"><h3 class="text-lg font-semibold mb-2">📈 Escalabilidad</h3><p class="text-gray-600">Opera 24/7 y crece 3× sin ampliar equipo.</p></div>
+          <div class="bg-white p-6 rounded-xl shadow"><h3 class="text-lg font-semibold mb-2">😊 Satisfacción</h3><p class="text-gray-600">+43% satisfacción del equipo; onboarding 8h → 1h.</p></div>
+          <div class="bg-white p-6 rounded-xl shadow"><h3 class="text-lg font-semibold mb-2">🚀 Respuesta</h3><p class="text-gray-600">Tiempo de respuesta <strong>-67%</strong>. CSAT hasta 89%.</p></div>
+          <div class="bg-white p-6 rounded-xl shadow"><h3 class="text-lg font-semibold mb-2">📊 Visibilidad</h3><p class="text-gray-600">Dashboards en tiempo real para decisiones rápidas.</p></div>
+          <div class="bg-white p-6 rounded-xl shadow"><h3 class="text-lg font-semibold mb-2">🔒 Compliance</h3><p class="text-gray-600">Procesos 100% trazables y auditables (GDPR).</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section id="casos" class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">Casos de éxito reales</h2>
+          <p class="text-xl text-gray-600">Antes y después en eCommerce, servicios y RRHH.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+            <h3 class="text-lg font-semibold mb-2">eCommerce — Ventas</h3>
+            <p class="text-sm text-gray-600 mb-4">500+ pedidos/día, inventario multicanal sincronizado.</p>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>⏱️ 45 min → 3 min/pedido (‑93%)</li>
+              <li>💰 Ahorro anual: €67.000</li>
+              <li>📈 Ventas: +34%</li>
+            </ul>
+          </article>
+          <article class="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+            <h3 class="text-lg font-semibold mb-2">Servicios — Lead Management</h3>
+            <p class="text-sm text-gray-600 mb-4">Captura omnicanal, scoring y asignación automática.</p>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>🎯 Conversión: 12% → 28%</li>
+              <li>⚡ Respuesta: 4.2h → 7 min</li>
+              <li>📊 Seguimiento &lt;2h: 98%</li>
+            </ul>
+          </article>
+          <article class="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+            <h3 class="text-lg font-semibold mb-2">RRHH — Onboarding</h3>
+            <p class="text-sm text-gray-600 mb-4">Cuentas, documentos, calendario y checklist 30‑60‑90.</p>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>🚀 16h → 2h RRHH (‑87%)</li>
+              <li>😊 Satisfacción: 7.2 → 9.1</li>
+              <li>⚡ Time‑to‑productivity: 3s → 1s</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">Lo que dicen nuestros clientes</h2>
+          <p class="text-xl text-gray-600">Prueba social con foco en ROI y velocidad.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- 3–6 testimonials -->
+          <figure class="bg-white p-6 rounded-xl shadow">
+            <blockquote class="text-gray-700">“En 6 semanas pasamos de 200 a 800 pedidos/día. <strong>ROI 420% en 12 meses</strong>.”</blockquote>
+            <figcaption class="mt-4 text-sm text-gray-500">María González — CEO, ElectroMax</figcaption>
+          </figure>
+          <figure class="bg-white p-6 rounded-xl shadow">
+            <blockquote class="text-gray-700">“<strong>Conversión 31%</strong> y tiempos de respuesta de minutos. Game‑changer.”</blockquote>
+            <figcaption class="mt-4 text-sm text-gray-500">Carlos Ruiz — Director Marketing, Consulting Plus</figcaption>
+          </figure>
+          <figure class="bg-white p-6 rounded-xl shadow">
+            <blockquote class="text-gray-700">“Onboarding automático y consistente. <strong>‑12h por empleado</strong>.”</blockquote>
+            <figcaption class="mt-4 text-sm text-gray-500">Ana Martín — HR Director, TechFlow</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section id="precios" class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">Planes de automatización</h2>
+          <p class="text-xl text-gray-600">Transparencia total y garantías claras.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Starter -->
+          <div class="border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <h3 class="text-xl font-semibold mb-2">Starter — Automatización Esencial</h3>
+            <p class="text-3xl font-bold mb-4">€2.997</p>
+            <ul class="text-sm text-gray-700 space-y-2 mb-6">
+              <li>✅ 3 automatizaciones simples</li>
+              <li>✅ Hasta 5 aplicaciones</li>
+              <li>✅ Setup en 2 semanas</li>
+              <li>✅ 1 mes de soporte</li>
+              <li>✅ Garantía 30 días</li>
+            </ul>
+            <a href="#contacto" class="block text-center bg-gray-900 hover:bg-black text-white py-3 rounded-lg font-semibold focus:outline-none focus:ring-4 focus:ring-gray-300">Empezar</a>
+          </div>
+          <!-- Professional -->
+          <div class="border-2 border-success-500 rounded-2xl p-8 shadow-md relative">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-success-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Más popular</span>
+            <h3 class="text-xl font-semibold mb-2">Professional — Transformación Completa</h3>
+            <p class="text-3xl font-bold mb-4">€7.497</p>
+            <ul class="text-sm text-gray-700 space-y-2 mb-6">
+              <li>✅ 8 automatizaciones complejas</li>
+              <li>✅ Apps ilimitadas</li>
+              <li>✅ APIs y webhooks avanzados</li>
+              <li>✅ Setup en 4–6 semanas</li>
+              <li>✅ 3 meses soporte prioritario</li>
+              <li>✅ Dashboard personalizado</li>
+              <li>✅ Garantía 60 días + ROI 90 días</li>
+            </ul>
+            <a href="#contacto" class="block text-center bg-success-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold shadow focus:outline-none focus:ring-4 focus:ring-green-300">Seleccionar</a>
+          </div>
+          <!-- Enterprise -->
+          <div class="border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <h3 class="text-xl font-semibold mb-2">Enterprise — Escalado sin Límites</h3>
+            <p class="text-3xl font-bold mb-4">€15.997+</p>
+            <ul class="text-sm text-gray-700 space-y-2 mb-6">
+              <li>✅ Automatizaciones ilimitadas</li>
+              <li>✅ Integraciones y APIs a medida</li>
+              <li>✅ Multi‑departamento</li>
+              <li>✅ Manager dedicado</li>
+              <li>✅ 6 meses soporte 24/7 (SLA &lt;2h)</li>
+              <li>✅ Auditorías trimestrales</li>
+              <li>✅ ROI garantizado</li>
+            </ul>
+            <a href="#contacto" class="block text-center bg-gray-900 hover:bg-black text-white py-3 rounded-lg font-semibold focus:outline-none focus:ring-4 focus:ring-gray-300">Hablar con un experto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">Preguntas frecuentes</h2>
+          <p class="text-gray-600">Resolvemos dudas clave antes de empezar.</p>
+        </div>
+        <div class="space-y-4" role="list">
+          <details class="group bg-white p-5 rounded-xl shadow" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between"> 
+              <span class="text-lg font-semibold">¿Cuánto cuesta automatizar mi negocio?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="mt-3 text-gray-700">Desde <strong>€2.997</strong> (básico) a <strong>€15.000+</strong> (enterprise). <strong>ROI positivo en 90 días</strong> garantizado o devolvemos el dinero.</div>
+          </details>
+          <details class="group bg-white p-5 rounded-xl shadow">
+            <summary class="flex cursor-pointer list-none items-center justify-between"> 
+              <span class="text-lg font-semibold">¿Cuánto tardamos en implementarlo?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="mt-3 text-gray-700">Automatizaciones simples: <strong>5–10 días</strong>. Proyectos complejos: <strong>3–8 semanas</strong>. Entregables semanales.</div>
+          </details>
+          <details class="group bg-white p-5 rounded-xl shadow">
+            <summary class="flex cursor-pointer list-none items-center justify-between"> 
+              <span class="text-lg font-semibold">¿Es seguro y compatible con nuestro software?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="mt-3 text-gray-700">Cumplimos GDPR, acceso mínimo y conexiones encriptadas. Trabajamos con <strong>500+ apps</strong> y creamos APIs si es necesario.</div>
+          </details>
+          <details class="group bg-white p-5 rounded-xl shadow">
+            <summary class="flex cursor-pointer list-none items-center justify-between"> 
+              <span class="text-lg font-semibold">¿Qué pasa si algo falla?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">⌄</span>
+            </summary>
+            <div class="mt-3 text-gray-700">Monitoreo proactivo 24/7 y <strong>SLA &lt;4h</strong> (2h en Enterprise). Backups y rollback inmediato.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-16 lg:py-24 bg-primary-900 text-white">
+      <div class="max-w-5xl mx-auto px-4 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-4xl font-bold mb-4">¿Listo para recuperar 2+ horas al día?</h2>
+          <p class="text-xl text-gray-200">Garantizamos ROI positivo en 90 días o devolvemos tu dinero.</p>
+        </div>
+        <form id="contact-form" class="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl" aria-describedby="form-help">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="nombre" class="block text-sm font-medium mb-2">Nombre completo *</label>
+              <input id="nombre" name="nombre" type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tu nombre" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium mb-2">Email empresarial *</label>
+              <input id="email" name="email" type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="tu@empresa.com" />
+            </div>
+            <div>
+              <label for="empresa" class="block text-sm font-medium mb-2">Empresa *</label>
+              <input id="empresa" name="empresa" type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nombre de tu empresa" />
+            </div>
+            <div>
+              <label for="empleados" class="block text-sm font-medium mb-2">Número de empleados</label>
+              <select id="empleados" name="empleados" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <option value="">Selecciona…</option>
+                <option>1–9</option>
+                <option>10–49</option>
+                <option>50–199</option>
+                <option>200–499</option>
+                <option>500+</option>
+              </select>
+            </div>
+            <div class="md:col-span-2">
+              <label for="mensaje" class="block text-sm font-medium mb-2">¿Qué quieres automatizar?</label>
+              <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Cuéntanos tus procesos actuales y objetivos"></textarea>
+            </div>
+          </div>
+          <p id="form-help" class="sr-only">Todos los campos marcados con * son obligatorios.</p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <button id="submitBtn" type="submit" class="bg-success-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow focus:outline-none focus:ring-4 focus:ring-green-300">Enviar solicitud</button>
+            <a href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noopener" class="bg-white hover:bg-gray-50 text-primary-900 px-6 py-3 rounded-lg font-semibold border-2 border-primary-900 focus:outline-none focus:ring-4 focus:ring-blue-300">💬 WhatsApp</a>
+            <a href="https://calendly.com/tu-enlace/30min" target="_blank" rel="noopener" class="bg-white hover:bg-gray-50 text-primary-900 px-6 py-3 rounded-lg font-semibold border-2 border-primary-900 focus:outline-none focus:ring-4 focus:ring-blue-300">📅 Reservar 30 min</a>
+          </div>
+          <p id="form-status" class="mt-4 text-sm text-gray-600" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-gray-500">© <span id="y"></span> AutomationPro. Todos los derechos reservados.</p>
+      <nav class="flex items-center gap-4 text-sm">
+        <a href="/privacidad" class="text-gray-600 hover:text-primary-900">Política de privacidad</a>
+        <a href="/condiciones" class="text-gray-600 hover:text-primary-900">Condiciones generales</a>
+        <a href="#contacto" class="text-gray-600 hover:text-primary-900">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://automationpro.es/#organization",
+        "name": "AutomationPro",
+        "description": "Especialistas en automatización empresarial y procesos digitales",
+        "url": "https://automationpro.es",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://automationpro.es/logo-automationpro.png",
+          "alt": "AutomationPro - Automatización Empresarial"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+34-XXX-XXX-XXX",
+          "contactType": "Customer Service",
+          "availableLanguage": ["Spanish", "English"],
+          "areaServed": "ES"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ES",
+          "addressLocality": "[Ciudad]"
+        },
+        "sameAs": [
+          "https://linkedin.com/company/automationpro",
+          "https://twitter.com/automationpro_es"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://automationpro.es/#service",
+        "name": "Automatización de Procesos Empresariales",
+        "description": "Servicios de automatización con Zapier, Make, n8n y herramientas no‑code",
+        "provider": {"@id": "https://automationpro.es/#organization"},
+        "serviceType": "Business Process Automation",
+        "areaServed": "ES",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Automatización",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plan Starter", "description": "Hasta 3 automatizaciones simples"}, "price": "2997", "priceCurrency": "EUR"},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plan Professional", "description": "Hasta 8 automatizaciones complejas"}, "price": "7497", "priceCurrency": "EUR"},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plan Enterprise", "description": "Automatizaciones ilimitadas"}, "price": "15997", "priceCurrency": "EUR"}
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://automationpro.es/#faq",
+        "mainEntity": [
+          {"@type": "Question", "name": "¿Cuánto cuesta automatizar mi negocio?", "acceptedAnswer": {"@type": "Answer", "text": "Desde €2.997 a €15.000+. ROI positivo en 90 días."}},
+          {"@type": "Question", "name": "¿Cuánto tiempo tarda?", "acceptedAnswer": {"@type": "Answer", "text": "Simples 5–10 días; complejos 3–8 semanas."}},
+          {"@type": "Question", "name": "¿Es seguro?", "acceptedAnswer": {"@type": "Answer", "text": "Cumplimiento GDPR, accesos mínimos y cifrado."}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://automationpro.es/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://automationpro.es"},
+          {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://automationpro.es#servicios"},
+          {"@type": "ListItem", "position": 3, "name": "Contacto", "item": "https://automationpro.es#contacto"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Scripts -->
+  <script>
+    const ySpan = document.getElementById('y');
+    if (ySpan) ySpan.textContent = new Date().getFullYear();
+
+    function toggleMobileMenu() {
+      const m = document.getElementById('mobile-menu');
+      if (!m) return;
+      m.classList.toggle('hidden');
+    }
+
+    // Highlight active nav on scroll
+    const sections = ['hero','problema','servicios','proceso','beneficios','casos','testimonios','precios','faq'];
+    const navLinks = document.querySelectorAll('.nav-link');
+    const opts = { root: null, rootMargin: '0px 0px -70% 0px', threshold: 0 };
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        const id = e.target.getAttribute('id');
+        const link = Array.from(navLinks).find(a=>a.getAttribute('href') === `#${id}`);
+        if (link) {
+          if (e.isIntersecting) {
+            navLinks.forEach(a=>a.classList.remove('text-primary-900','underline'));
+            link.classList.add('text-primary-900','underline');
+          }
+        }
+      })
+    }, opts);
+    sections.forEach(id=>{ const el = document.getElementById(id); if (el) obs.observe(el); });
+
+    // Contact form fake submit
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submitBtn');
+    if (form) {
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        if (!submitBtn) return;
+        submitBtn.classList.add('loading');
+        submitBtn.textContent = 'Enviando…';
+        // TODO: Reemplazar por fetch() a tu endpoint / servicio (Zapier, Make, Formspree…)
+        await new Promise(r=>setTimeout(r, 1200));
+        submitBtn.classList.remove('loading');
+        submitBtn.textContent = 'Enviar solicitud';
+        if (statusEl) statusEl.textContent = '¡Gracias! Te contactaremos en &lt;15 minutos.';
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>
